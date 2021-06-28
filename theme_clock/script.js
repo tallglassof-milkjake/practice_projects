@@ -11,6 +11,15 @@ const timezoneSearch = document.querySelector('.new-timezone-search');
 
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+const timeZones = [
+    {name: 'London', timezone: 'Europe/London'},
+    {name: 'Los Angeles', timezone: 'America/Los_Angeles'},
+    {name: 'New York', timezone: 'America/New_York'},
+    {name: 'Perth', timezone: 'Australia/Perth'},
+    {name: 'Rome', timezone: 'Europe/Rome'}
+]
+
 const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda",
 "Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados",
 "Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil",
@@ -99,30 +108,24 @@ timezoneSearch.addEventListener('keyup', (e) => {
         addTimezoneBtn.classList.remove('in-active')
         e.currentTarget.value = '';
     }
+
+    
     
 });
 
-timezoneSearch.addEventListener('keypress', (e) => {
-    let searchInput = document.getElementById('timezoneSearch');
-
-    for (i = 0; i < countries.length; i++) {
-        if (countries[i] == searchInput) {
-            console.log(countries[i])
-        } else {
-            console.log("YEAH NAH")
-        }
+function renderNames(arrayOfNames) {
+    let liElement = '';
+    for (let i = 0; i < arrayOfNames.length; i++) {
+        liElement += `<li>${arrayOfNames[i].name}</li>`
     }
-    // console.log(e.code)
-});
+    document.getElementById('list-container').innerHTML = liElement;
+}
+// renderNames(timeZones);
 
-// timezoneSearch.onclick = function() {
-//     let searchInput = document.getElementById('timezoneSearch');
-
-//     for (i = 0; i < countries.length; i++) {
-//         if (countries[i] == searchInput) {
-//             console.log(countries[i])
-//         } else {
-//             console.log("YEAH NAH")
-//         }
-//     }
-// }
+function filterNames(event) {
+    let searchValue = event.target.value;
+    let filterNames = timeZones.filter((v, i) => {
+        return(v.name.includes(searchValue));
+    })
+    renderNames(filterNames)
+}

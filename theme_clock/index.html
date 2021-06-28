@@ -32,10 +32,14 @@
         <button class="add-timezone">
             <i class="fas fa-plus fa-2x"></i>
         </button>
-        <input class="new-timezone-search" id="timezoneSearch" placeholder="Search...">
+        <input type="text" class="new-timezone-search" id="timezoneSearch" placeholder="Search..." onkeyup="filterNames(event)">
+        <ul class="list-container" id="list-container">
+
+        </ul>
     </div>
     
 
     <script src="script.js"></script>
+
 </body>
 </html>
