@@ -24,6 +24,12 @@ toggle.addEventListener('click', (e) => {
 });
 
 function setTime() {
+    // how to get time internationally
+    ///////////////////////////////////////////////////////////////////////
+    const londonTime = new Date();
+    console.log(londonTime.toLocaleString('en-US', {timeZone: 'Europe/London'}))
+    ///////////////////////////////////////////////////////////////////////
+
     const time = new Date();
     const month = time.getMonth();
     const day = time.getDay();
