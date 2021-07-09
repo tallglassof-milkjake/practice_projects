@@ -5,34 +5,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Project</title>
+    <title>Home</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="home">
     <header>
         <div class="inner flex">
-            <a href="" class="logo">
-                SomeComp
+            <a href="index.html" class="logo">
+                <i class="fas fa-equals"></i>
+                Developer
             </a>
-            <nav>
+            <nav id="nav">
                 <ul>
-                    <li><a href="" class="active">Home</a></li>
-                    <li><a href="" class="active">Services</a></li>
-                    <li><a href="" class="active">About</a></li>
-                    <li><a href="" class="active">Contact</a></li>
+                    <li class="menu-item" id="menuItem"><a href="index.html" class="btn active" id="menu">Home</a></li>
+                    <li class="menu-item" id="menuItem"><a href="services.html" class="btn" id="menu">Services</a></li>
+                    <li class="menu-item" id="menuItem"><a href="about.html" class="btn" id="menu">About</a></li>
+                    <li class="menu-item" id="menuItem"><a href="conatct.html" class="btn" id="menu">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section>
+    <section class="main-section">
         <div class="inner">
-            <h1>Gi further than ever before</h1>
+            <div class="inner-main">
+                <h1>Full Stack Developer</h1>
+                <p class="main-description">
+                    Javascript, Node, Python & Cold-Fusion Developer.
+                    MongoDB, MariaDB & MySQL.
+                </p>
+                <div class="picture">
+                    <img src="assets/tree.png" alt="Tree">
+                </div>
+                <button id="workBtn" class="workBtn"><a href="#myWork">See My Work</a></button>
+                <button id="learnBtn" class="learnBtn"><a href="myLearn">Learn More</a></button>
+            </div>
+
+            <h2 id="myWork" class="work-heading">My Work</h2>
+            <div class="container">
+                <div class="panel active" style="background-image: url(assets/city.jpg)">
+                    <h3 class="card-text">Explore The World</h3>
+                </div>
+                <div class="panel" style="background-image: url(assets/forest.jpg)">
+                    <h3 class="card-text">Wild Forest</h3>
+                </div>
+                <div class="panel" style="background-image: url(assets/sunny-beach.jpg)">
+                    <h3 class="card-text">Sunny Beach</h3>
+                </div>
+                <div class="panel" style="background-image: url(assets/mountains.jpg)">
+                    <h3 class="card-text">Mountains</h3>
+                </div>
+                <div class="panel" style="background-image: url(assets/snowy-city.jpg)">
+                    <h3 class="card-text">Snowy City</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="inner-sub-section">
+            
             <p class="subhead">
                 Pommy ipsum 'ar kid muck about fake tan naff I'm off to Bedfordshire
                 clotted cream, atrocious half-inch it the lakes jolly good pork
