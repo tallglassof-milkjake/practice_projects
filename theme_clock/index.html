@@ -12,31 +12,64 @@
 </head>
 <body>
     <button class="toggle">Dark Mode</button>
-
-    <div class="clock-container">
-        <div class="clock">
-            <div class="needle hour"></div>
-            <div class="needle minute"></div>
-            <div class="needle second"></div>
-            <div class="center-point"></div>
+    <section>
+        <div class="clock-container">
+            <div class="clock">
+                <div class="needle hour"></div>
+                <div class="needle minute"></div>
+                <div class="needle second"></div>
+                <div class="center-point"></div>
+            </div>
+    
+            <div class="time">
+                
+            </div>
+            <div class="date"></div>
         </div>
-
-        <div class="time">
-            
+    
+        <div class="create-timezone">
+            <h1 class="new-timezone">Local Time</h1>
         </div>
-        <div class="date"></div>
-    </div>
+    </section>
 
-    <div class="create-timezone">
-        <h1 class="new-timezone">Add a Timezone</h1>
-        <button class="add-timezone">
-            <i class="fas fa-plus fa-2x"></i>
-        </button>
-        <input type="text" class="new-timezone-search" id="timezoneSearch" placeholder="Search..." onkeyup="filterNames(event)">
-        <ul class="list-container" id="list-container">
-
-        </ul>
+    <div class="navLeft">
+        <div class="search-container">
+            <button class="add-timezone" for="searchBar">
+                <i class="fas fa-plus fa-2x"></i>
+            </button>
+            <input 
+                type="text"
+                name="searchBar"
+                class="new-timezone-search" 
+                id="timezoneSearch" 
+                placeholder="Search..."
+            >
+            <ul class="list-container" id="list-container">
+                <!-- <li class="zone">
+                    <button class="new-zone-selector">
+                        city
+                    </button>
+                </li>
+                <li class="zone">
+                    <button class="new-zone-selector">
+                        city
+                    </button>
+                </li>
+                <li class="zone">
+                    <button class="new-zone-selector">
+                        city
+                    </button>
+                </li>
+                <li class="zone">
+                    <button class="new-zone-selector">
+                        city
+                    </button>
+                </li> -->
+            </ul>
+        </div>
     </div>
+    
+    
     
 
     <script src="script.js"></script>

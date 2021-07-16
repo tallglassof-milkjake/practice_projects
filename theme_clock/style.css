@@ -51,8 +51,8 @@ body {
 
 .create-timezone {
   padding: 8px 12px;
-  position: absolute;
-  bottom: 200px;
+  position: relative;
+  /* bottom: 200px; */
 }
 .add-timezone {
   opacity: 1;
@@ -72,10 +72,14 @@ body {
   z-index: -1;
 }
 
+.new-timezone {
+  text-align: center;
+}
+
 .new-timezone-search {
   font-size: 22px;
   opacity: 0;
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
   width: 30px;
@@ -186,4 +190,49 @@ body {
   line-height: 18px;
   transition: all 0.5s ease-in;
   font-size: 12px;
+}
+
+.navLeft {
+  position: absolute;
+  left: 45px;
+  top: 100px;
+}
+
+.search-container {
+  position: relative;
+}
+
+.list-container {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.zone {
+  list-style-type: none;
+}
+
+.new-zone-selector {
+  text-align: left;
+  margin-left: 50%;
+  padding: 0.5rem 1rem;
+  transform: translateX(-50%);
+  width: 80%;
+  border: none;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 100;
+  font-family: "Heebo", sans-serif;
+}
+
+.new-zone-selector:hover {
+  color: #e74c3c;
 }
