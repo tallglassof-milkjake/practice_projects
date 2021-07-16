@@ -250,6 +250,7 @@ p {
   min-height: 100%;
   right: 0;
   top: 30%;
+  z-index: -1;
 }
 
 .picture img {
@@ -284,7 +285,7 @@ p {
 }
 
 .inner-sub-section {
-  padding-top: 5em;
+  /* padding-top: 5em; */
   width: 60%;
   height: 100%;
   margin: 0 auto;
@@ -353,4 +354,204 @@ p {
   padding: 0 2em;
   font-size: 1.1rem;
   font-weight: 300;
+}
+
+.card-right h4 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding: 0 2em;
+}
+
+.card-right .card-description {
+  padding: 0 2em;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+/* hr */
+.hr {
+  margin: 8em;
+  background: rgb(255, 2, 0);
+  /* border: solid 0.1px rgb(255, 2, 0); */
+  height: 1px;
+}
+
+
+
+
+.tertiary-section {
+  position: relative;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(93, 255, 13, 0.3),
+    rgba(93, 255, 13, 0)
+  );
+  width: 100%;
+  height: 80vh;
+}
+
+/* contact form section */
+
+
+
+
+.form-container {
+  top: -280px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  margin: 0 auto;
+  width: 40%;
+  background: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgb(170, 170, 170);
+}
+
+.contact {
+  /* position: absolute; */
+  top: -100px;
+}
+
+.form-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* .form-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+} */
+
+.form-container a {
+  text-decoration: none;
+  color: rgba(93, 255, 13, 0.3),;
+}
+
+.contact-btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background-color: rgb(255, 2, 0);
+  color: white;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+}
+.contact-btn:focus {
+  outline: 0;
+}
+
+.contact-btn:active {
+  transform: scale(0.98);
+}
+
+.text {
+  margin-top: 30px;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 100%;
+  z-index: 1;
+}
+
+.form-control input, textarea {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px rgba(93, 255, 13, 0.3) solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: black;
+}
+
+.form-control input:focus,
+.form-control input:valid,
+.form-control textarea:focus
+ {
+  outline: 0;
+  border-bottom-color: rgb(255, 2, 0);
+}
+
+/* .form-control textarea:valid */
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+input, textarea {
+  z-index: 5;
+  font-family: "Nunito", sans-serif;
+  font-weight: 100;
+}
+
+label {
+  z-index: -1;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 1.125rem;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span,
+.form-control textarea:focus + label span
+ {
+  color: rgb(255, 2, 0);
+  transform: translateY(-30px);
+}
+
+/* FOOTER */
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  color: black;
+  text-align: center;
+}
+
+.footer-nav {
+  float: right;
+}
+
+footer {
+  clear: both;
+  position: relative;
+  height: 200px;
+  margin-top: -200px;
+}
+
+footer .logo {
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: rgb(255, 2, 0);
+}
+
+.fab {
+  color: rgb(255, 2, 0);
+  filter: drop-shadow(0px 5px 20px rgb(170, 170, 170));
+  
+}
+
+.fab:hover {
+  color: rgba(255, 2, 0, 0.3);
+}
+
+.fab.active {
+  transform: scale(0.98);
 }
